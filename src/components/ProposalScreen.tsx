@@ -22,10 +22,11 @@ const ProposalScreen = ({ onYes }: Props) => (
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="text-center text-muted-foreground p-4">
-          <p className="text-4xl mb-2">🐱</p>
-          <p className="text-sm">Your cat GIF here!</p>
-        </div>
+        <img
+          src="/Puss In Boots Please GIF.gif"
+          alt="Please Cat"
+          className="w-full h-full object-cover"
+        />
       </motion.div>
 
       {/* Proposal text */}

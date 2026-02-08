@@ -7,15 +7,13 @@ const DodgeButton = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const dodge = useCallback(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    // Calculate movement relative to the viewport size to make it "dodgey" and potentially go off-screen
+    const maxX = window.innerWidth;
+    const maxY = window.innerHeight;
 
-    const rect = container.getBoundingClientRect();
-    const maxX = rect.width - 120;
-    const maxY = rect.height - 50;
-
-    const newX = (Math.random() - 0.5) * maxX;
-    const newY = (Math.random() - 0.5) * maxY;
+    // Generate a random position that can be anywhere, even off-screen by a bit
+    const newX = (Math.random() - 0.5) * maxX * 1.5;
+    const newY = (Math.random() - 0.5) * maxY * 1.5;
 
     setPosition({ x: newX, y: newY });
   }, []);

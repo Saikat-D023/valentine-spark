@@ -98,10 +98,11 @@ const CelebrationScreen = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, type: "spring", stiffness: 150 }}
         >
-          <div className="text-center text-muted-foreground p-4">
-            <p className="text-5xl mb-2">🐱</p>
-            <p className="text-sm">Your cat GIF here!</p>
-          </div>
+          <img
+            src="/Cute Cat GIF.gif"
+            alt="Cute Cat"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
         {/* Message */}
